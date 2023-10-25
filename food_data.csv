@@ -1,0 +1,141 @@
+FOOD,CALORIES(G),CARBOHYDRATES(G),PROTEIN(G),FAT(G),QUANTITY(G)
+Chapati,297,15,3,0.5,100
+Roti,297,15,3,0.5,100
+Garlic Herb Chapati,273,48.8,9.4,7.5,100
+Garlic Herb Roti,273,48.8,9.4,7.5,100
+Rumali Roti,140,29,4,0,100
+Masala Chapati,340,44,10,12,100
+Masala Roti,340,44,10,12,100
+Missi Roti,125,18,4.5,35,100
+Chapathi,273,48.8,9.4,7.5,100
+Roti,273,48.8,9.4,7.5,100
+Chicken Korma Naan,262,35.5,6.1,10.6,100
+Garlic Coriander Naan,323,47.5,9,10.8,100
+Kuloha Naan,125,23,4.5,1.5,100
+Masala Naan,120,15,7,3,100
+Onion Naan,120,15,7,3.5,100
+Peshwari Naan,322,49.8,6.6,9.8,100
+Roghani Naan,125,19,4,3,100
+Spicy Tomato Naan,286,45.2,8.8,8.9,100
+Butter Naan,191,21.6,3.6,9.9,100
+Tandoon Naan,120,19,4,13,100
+Aloo Paratha,360,47,18,110,100
+Lachcha Paratha,290,40,11,9,100
+Vegetable Paratha,430,48,20,7,100
+Onion Paratha,100,33,13,110,100
+Plain Paratha,290,42,11,9,100
+Chicken Tikka Masala,251,35.1,6.2,9.6,100
+Potato Brinjal Curry,103,32.3,1.3,4.7,100
+Potato Beans Curry,134,34.3,2.4,8.7,100
+Aloo Curry,105,14.4,1.2,5,100
+Mashed eggplant,70,5.7,1.2,4.7,100
+Ladys Finger,161,12.1,3.9,10.7,100
+Chick Peas,74,3.3,4.3,4.1,100
+Methi Aloo,121,16,2.2,5.4,100
+Mutter Paneer,147,10.7,6.5,4.1,100
+Pumpkin,67,6.7,1.6,3.8,100
+Shahi Paneer,283,10,12,25,100
+Shimla Mirchi Aloo,93,12.8,1.5,3.4,100
+Stuffed Tomato,85,11,2.1,3.4,100
+Ridge gound,66,4,1.2,4.7,100
+Vegetable Kofta Curry,147,13.3,2.6,9.1,100
+Vegetable Korma,88,8.7,1.4,5.3,100
+Pigeon Peas,53,8,2.8,1.2,100
+Split Chick Peas,99,12.8,4.5,3.2,100
+Dal Makhani ,117,14,6.8,1.3,100
+Moong Dal,211,31.3,12.8,3.7,100
+Masoor dal,165,24.7,10.3,2.7,100
+Urad dal,107,14,6,3,100
+Sambar,5,2.6,15,1.8,100
+White Rice,111,25,2.2,0.2,100
+Pulao,119,19,3.2,3.4,100
+Kichidi,215,33,4.3,7.4,100
+Cow Milk,67,4.4,3.2,4.1,100
+Bufffalo Milk,117,5,4.3,6.5,100
+Curd,60,3,3.1,4,100
+Butter Milk,15,0.5,0.8,1.1,100
+Paneer,265,1.2,18.3,20.8,100
+Cheese,348,6.3,24.1,25.1,100
+Lassi,69,3.2,5.7,0.5,100
+Samosa,369,48.1,6.3,17.6,100
+Brinjal Pickle,367,34.6,2.2,24.4,100
+Chilli Pickle,325,1.3,4.3,33.7,100
+Lime Pickle,152,15,2.2,9.3,100
+Mango Pickle,278,9,1.8,26.1,100
+Beetroot,35,9.56,1.61,0.17,100
+Bell Pepper,15,4.6,0.99,0.3,100
+Black Olives,2,3.84,0.84,6.27,100
+Broccoli,207,6.64,2.82,0.37,100
+Brussels Sprouts,8,8.95,3.38,0.3,100
+Cabbage,227,5.37,1.28,0.1,100
+Carrot,25,9.58,0.93,0.24,100
+Cauliflower,3,4.97,1.92,0.28,100
+Celery,6,2.97,0.97,0.17,100
+Cherry Tomato,20,3.89,0.87,0.2,100
+Corn,562,19.02,3.27,1.18,100
+Cucumber,66,3.63,0.65,0.11,100
+Garlic,4,33.06,6.36,0.5,100
+Green Beans,34,6.97,1.82,0.15,100
+Green Olives,2,3.84,0.84,15.32,100
+Green Onion,5,7.34,1.83,0.2,100
+Lettuce,90,2.23,0.85,0.15,100
+Mushrooms,1,3.26,3.09,0.34,100
+Onion,34,9.34,0.94,0.1,100
+Peas,79,14.45,5.42,0.4,100
+Potato,164,17.49,2.02,0.1,100
+Pumpkin,51,7.76,0.63,0.1,100
+Radishes,1,2.03,0.68,0.1,100
+Red Cabbage,7,6.66,1.43,0.1,100
+Spinach,78,3.63,2.86,0.39,100
+Sweet Potato,112,20.71,1.57,0.05,100
+Tomato,20,3.89,0.88,0.2,100
+Apple,95,11.4,0.26,0.17,100
+Avocado,320,8.53,2,14.66,100
+Banana,111,22,1.09,0.2,100
+Blackberries,62,9.61,1.39,0.49,100
+Blueberries,84,14.49,0.74,0.33,100
+Cherries,4,16.01,1.06,0.3,100
+Custard Apple,136,34.06,1.67,0.6,100
+Dates,20,74.97,1.81,0.5,100
+Grapes,104,17.77,0.63,0.16,100
+Guava,37,14.32,2.55,0.95,100
+Jackfruit,143,23.25,2.5,0.64,100
+Jujube,22,20.23,1.2,0.2,100
+Kiwi,112,14.66,1.14,0.5,100
+Lemon,17,8.42,0.64,0.3,100
+Mango,202,14.98,0.82,0.27,100
+Orange,62,8.2,1,0.2,100
+Papaya,215,11.75,0.47,0.26,100
+Peach,59,9.54,0.91,0.25,100
+Pear,101,15.23,0.38,0.14,100
+Onion,40,9,1,0,100
+Dal,160,20,10,5,100
+Aloo Gobi,94,13,2,4,100
+Chicken Biryani,182,30,12,3,100
+Mutton Biryani,240,30,15,8,100
+Egg Biryani,214,30,12,6,100
+Prawns Biryani,190,20,15,6,100
+Vegetable Biryani,160,25,4,5,100
+Boiled Egg,155,1,13,11,100
+Palak Paneer,120,10,7,6,100
+Mint Chutney,210,44,11,14,100
+Coconut Chutney,172,27,12,13,100
+Egg Noodles,161,32,20,17,100
+Veg Noodles,341,34,10,19,100
+Manchuriyan,283,46,15,19,100
+Fried Rice,279,46,11,18,100
+Chicken Fried Rice,429,36,19,14,100
+Chicken Noodles,307,46,12,14,100
+Egg Fried Rice,130,41,19,10,100
+Pani Puri,257,23,18,14,100
+Chaat,268,22,15,15,100
+Cake,261,41,10,18,100
+Punugulu,436,23,20,10,100
+Dosa,331,30,15,18,100
+Egg Dosa,115,37,17,10,100
+Idly,487,29,12,10,100
+Mirchi Bajji,451,45,16,17,100
+Vada Recipe,320,45,14,20,100
+Aloo Bajji,496,38,12,10,100
+Butter,717,0,0,80,100
+Puri,296,46.73,7.54,9.43,100
