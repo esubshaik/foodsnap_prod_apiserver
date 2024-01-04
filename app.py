@@ -95,6 +95,39 @@ def get_recommendations():
         print(error_message)  # Optional: Print the error message for debugging purposes
         return jsonify({"error": error_message}), 500
 
+agedata = []
+
+# Read the CSV file and store the data in a list of dictionaries
+with open('minmax_calorie.csv', 'r') as file:
+    csv_reader = csv.DictReader(file)
+    for row in csv_reader:
+        agedata.append({
+            'age_min': int(row['age_min']),
+            'age_max': int(row['age_max']),
+            'women_min': float(row['women_min']),
+            'women_max': float(row['women_max']),
+            'men_min': float(row['men_min']),
+            'men_max': float(row['men_max'])
+        })
+
+@app.route('/get_minmax_calorie', methods=['GET'])
+def get_nutrition():
+    try:
+        user_age = int(request.args.get('user_age'))
+        user_gender = request.args.get('user_gender')
+        for item in agedata:
+            if item['age_min'] <= user_age <= item['age_max']:
+                if user_gender.lower() == 'women':
+                    return jsonify({'min_calories': item['women_min'], 'max_calories': item['women_max']})
+                elif user_gender.lower() == 'men':
+                    return jsonify({'min_calories': item['men_min'], 'max_calories': item['men_max']})
+                else:
+                    return jsonify({'error': 'invalid gender or age'})
+        
+        return jsonify({'error': 'age not found in any range'})
+    except ValueError:
+        return jsonify({'error': 'invalid age'})
+    
 
 if __name__ == '__main__':
     app.run(debug=True)
