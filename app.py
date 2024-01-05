@@ -111,7 +111,7 @@ with open('minmax_calorie.csv', 'r') as file:
         })
 
 @app.route('/get_minmax_calorie', methods=['GET'])
-def get_nutrition():
+def get_minmax_calorie():
     try:
         user_age = int(request.args.get('user_age'))
         user_gender = request.args.get('user_gender')
