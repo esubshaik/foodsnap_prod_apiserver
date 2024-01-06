@@ -129,5 +129,19 @@ def get_minmax_calorie():
         return jsonify({'error': 'invalid age'})
     
 
+@app.route('/get_description', methods=['GET'])
+def get_food_description():
+    food_name = request.args.get('foodname')
+    try:
+        file_path = os.path.join('descriptions', f"{food_name}.txt")
+        with open(file_path, 'r') as file:
+            content = file.read()
+            return jsonify({'data': content})
+    except FileNotFoundError:
+        print({'data': "Description file for '{food_name}' not found."})
+    except Exception as e:
+        print({'data': "An error occurred: {str(e)}"})
+
+
 if __name__ == '__main__':
     app.run(debug=True)
