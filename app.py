@@ -144,4 +144,4 @@ def get_food_description():
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=8001)
+    app.run(host="0.0.0.0", port=8081)
