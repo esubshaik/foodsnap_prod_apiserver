@@ -67,13 +67,7 @@ def getpdf(type,user_id,req_calories_day,start_date_string,end_date_string):
     table_data = [['Food','Date', 'Time', 'Calories', 'Carb(G)', 'Fat(G)', 'Prot(G)']]
     for i in range(len(cursor)):
         mongo_utc_time = cursor[i]['updatedAt']
-        # Convert the input string to a datetime object (assuming the input is in UTC)
-        # mongo_utc_time = datetime(2024, 1, 9, 17, 35, 14, 547000)
-
-        # Specify the target time zone ('Asia/Kolkata' for India)
         target_time_zone = pytz.timezone('Asia/Kolkata')
-
-        # Convert the datetime from UTC to the target time zone
         utc_datetime = mongo_utc_time.replace(tzinfo=pytz.utc).astimezone(target_time_zone)
         
         original_string = utc_datetime.astimezone(target_time_zone)
@@ -337,14 +331,17 @@ def merge_pdfs_in_folder(folder_path):
     return merged_pdf_path
 
 def delete_files_in_folder(folder_path):
-    for file_name in os.listdir(folder_path):
-        file_path = os.path.join(folder_path, file_name)
-        try:
-            if os.path.isfile(file_path):
-                os.remove(file_path)
-                print(f"Deleted: {file_path}")
-        except Exception as e:
-            print(f"Error deleting {file_path}: {e}")
+    try:
+        for file_name in os.listdir(folder_path):
+            file_path = os.path.join(folder_path, file_name)
+            try:
+                if os.path.isfile(file_path):
+                    os.remove(file_path)
+                    print(f"Deleted: {file_path}")
+            except Exception as e:
+                print(f"Error deleting {file_path}: {e}")
+    except Exception as err:
+        print("Ugh! directory doesn't have files")
             
 app = Flask(__name__)
 
