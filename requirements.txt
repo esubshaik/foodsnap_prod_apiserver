@@ -1,3 +1,6 @@
 flask
 gunicorn
 flask_cors
+pymongo
+reportlab
+PyPDF2
