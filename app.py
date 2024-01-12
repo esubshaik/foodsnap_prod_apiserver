@@ -146,10 +146,14 @@ def get_food_description():
 @app.route('/get_pdf', methods=['POST'])
 def get_pdf():
     delete_files_in_folder('./generated_pdfs')
-    type = 1
-    user_id = "659d8386695e77372c201c84"
-    start_date_string = "2024-01-01T00:00:00.000+00:00"
-    end_date_string = "2024-01-13T00:00:00.000+00:00"
+    type = request.form.get('type')  # Assuming 'type' is a key in the FormData
+    user_id = request.form.get('user_id')
+    start_date_string = request.form.get('start')
+    end_date_string = request.form.get('end')
+    # type = 1
+    # user_id = "659d8386695e77372c201c84"
+    # start_date_string = "2024-01-01T00:00:00.000+00:00"
+    # end_date_string = "2024-01-13T00:00:00.000+00:00"
     user_data, table_data, p, f, c = getpdf(type, user_id, start_date_string, end_date_string)
     if len(table_data) < 21:
         first_page(user_data, table_data, p, f, c)
