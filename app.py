@@ -3,6 +3,7 @@ import csv
 from flask_cors import CORS
 import os
 import base64
+from report import * 
 
 app = Flask(__name__)
 CORS(app)  
@@ -142,6 +143,32 @@ def get_food_description():
     except Exception as e:
         print({'data': "An error occurred: {str(e)}"})
 
+@app.route('/get_pdf', methods=['POST'])
+def get_pdf():
+    delete_files_in_folder('./generated_pdfs')
+    type = 1
+    user_id = "659d8386695e77372c201c84"
+    req_calories_day = "1800"
+    start_date_string = "2024-01-01T00:00:00.000+00:00"
+    end_date_string = "2024-01-13T00:00:00.000+00:00"
+    user_data, table_data, p, f, c = getpdf(type, user_id, req_calories_day, start_date_string, end_date_string)
+    if len(table_data) < 21:
+        first_page(user_data, table_data, p, f, c)
+    else:
+        first_page(user_data, table_data, p, f, c)
+        table_data = table_data[21:]
+        ind = 1
+        while table_data:
+            if len(table_data) > 40:
+                next_page(table_data[:40], ind)
+                table_data = table_data[40:]
+            else:
+                next_page(table_data, ind)
+                table_data = []
+            ind += 1
+    pdf_path = merge_pdfs_in_folder('./generated_pdfs')
+    custom_filename = 'diet-report.pdf'
+    return send_file(pdf_path, as_attachment=True, download_name=custom_filename)
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=8081)
