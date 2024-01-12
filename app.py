@@ -171,7 +171,10 @@ def get_pdf():
             ind += 1
     pdf_path = merge_pdfs_in_folder('./generated_pdfs')
     custom_filename = 'diet-report.pdf'
-    return send_file(pdf_path, as_attachment=True, download_name=custom_filename)
+    response = send_file(pdf_path, as_attachment=True, download_name=custom_filename)
+    response.headers["Content-Disposition"] = f"attachment; filename={custom_filename}"
+    response.headers["Content-Type"] = "application/pdf"
+    return response
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=8081)

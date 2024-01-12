@@ -49,6 +49,8 @@ def getpdf(type,user_id,start_date_string,end_date_string):
     user_data.append(cursor['weight'])
     user_data.append(cursor['height'])
     user_data.append(cursor['calrange'])
+    req_calories_day = cursor['calrange']
+    
     # Retrieve all documents in the collection
     cursor = collection.find({"user":ObjectId(user_id)})
     
@@ -83,7 +85,7 @@ def getpdf(type,user_id,start_date_string,end_date_string):
     f = f/temp
     c = c/temp
     days = (end_date - start_date).days
-    req = int(req_calories_day)
+    req = int(req_calories_day[:5])
     user_data.append(round(days*req,2))
     user_data.append(str(round(p,2))+" : "+str(round(f,2))+" : "+str(round(c,2)))
     # Close the MongoDB connection
