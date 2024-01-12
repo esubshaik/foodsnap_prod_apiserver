@@ -17,7 +17,7 @@ import pytz
 
 # Connect to the MongoDB server running on localhost at the default port
 
-def getpdf(type,user_id,req_calories_day,start_date_string,end_date_string):
+def getpdf(type,user_id,start_date_string,end_date_string):
     client = pymongo.MongoClient("mongodb+srv://esub:7864@foodeyeprod.ytyyxcw.mongodb.net/?retryWrites=true&w=majority")
     database_name = "test"
     db = client[database_name]
@@ -48,9 +48,7 @@ def getpdf(type,user_id,req_calories_day,start_date_string,end_date_string):
     user_data.append(cursor['gender'])
     user_data.append(cursor['weight'])
     user_data.append(cursor['height'])
-    user_data.append(req_calories_day)
-    
-    
+    user_data.append(cursor['calrange'])
     # Retrieve all documents in the collection
     cursor = collection.find({"user":ObjectId(user_id)})
     
