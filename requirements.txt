@@ -4,3 +4,4 @@ flask_cors
 pymongo
 reportlab
 PyPDF2
+pytz

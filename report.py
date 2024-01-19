@@ -38,6 +38,8 @@ def getpdf(type,user_id,start_date_string,end_date_string):
         user_data[0] = "Month"
     elif type == 3:
         user_data[0] = "Year"
+    else:
+        user_data[0] = "Custom"
     user_data.append(user_id)
     collection_name = "users"
     collection = db[collection_name]
@@ -241,7 +243,7 @@ def first_page(user_data,table_data,p,f,c):
 
 # initializing variables with values
 def next_page(table_data,index):
-    fileName = './generated_pdfs/next'+index+'.pdf'
+    fileName = './generated_pdfs/next'+str(index)+'.pdf'
     documentTitle = 'next'
     
     table_width = 700
@@ -291,12 +293,9 @@ def next_page(table_data,index):
     
     # Define table style
     table_style = TableStyle([
-        ('BACKGROUND', (0, 0), (-1, 0), colors.darkgreen),
-        ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
+        ('BACKGROUND', (0, 0), (-1, 0), colors.beige),
+        ('TEXTCOLOR', (0, 0), (-1, 0), colors.black),
         ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
-        ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
-        ('TOPPADDING', (0, 0), (-1, 0), 8),
-        ('BOTTOMPADDING', (0, 0), (-1, 0), 8),
         ('BACKGROUND', (0, 1), (-1, -1), colors.beige),
         ('GRID', (0, 0), (-1, -1), 1, colors.black)
     ])
