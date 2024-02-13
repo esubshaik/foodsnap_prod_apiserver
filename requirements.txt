@@ -5,3 +5,4 @@ pymongo
 reportlab
 PyPDF2
 pytz
+google-generativeai==0.3.1
