@@ -112,7 +112,7 @@ def get_recommendations():
                 if float(data[foodname]['PROTEIN(G)']) > 10 and float(data[foodname]['CARBOHYDRATES(G)']) < 10 and float(data[foodname]['FAT(G)']) < 10 or float(data[foodname]['CALORIES(G)']) < 200:
                     suggested_foods.append([foodname, data[foodname] ,get_images(foodname),description[foodname]])
         # print(suggested_foods)
-        return jsonify(suggested_foods),200
+        return jsonify({"foods":suggested_foods}),200
     except Exception as e:
         error_message = str(e)  # Get the string representation of the exception
         print(error_message)  # Optional: Print the error message for debugging purposes
