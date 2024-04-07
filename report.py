@@ -33,13 +33,13 @@ def getpdf(type,user_id,start_date_string,end_date_string):
         "user":ObjectId(user_id)
     }
     user_data = []
-    user_data.append("Week")
+    user_data.append("Custom")
     if type==2:
-        user_data[0] = "Month"
+        user_data[0] = "Monthly"
     elif type == 3:
-        user_data[0] = "Year"
-    else:
-        user_data[0] = "Custom"
+        user_data[0] = "Yearly"
+    elif type == 1:
+        user_data[0] = "Weekly"
     user_data.append(user_id)
     collection_name = "users"
     collection = db[collection_name]
@@ -83,9 +83,10 @@ def getpdf(type,user_id,start_date_string,end_date_string):
         table_data.append([cursor[i]['foodname'],formatted_date,formatted_time,cursor[i]['nutridata'][0],cursor[i]['nutridata'][1],cursor[i]['nutridata'][2],cursor[i]['nutridata'][3]])
     user_data.append(round(curr_cal,2))
     temp = (p+f+c)
-    p = p/temp
-    f = f/temp
-    c = c/temp
+    if temp !=  0:
+        p = p/temp
+        f = f/temp
+        c = c/temp
     days = (end_date - start_date).days
     req = int(req_calories_day[:5])
     user_data.append(round(days*req,2))
